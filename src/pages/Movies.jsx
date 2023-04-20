@@ -19,7 +19,8 @@ const Movies = () => {
   // додаємо запит на фільм
   useEffect(() => {
     const query = searchParams.get('query') ?? ''; // щоб не було помилки, якщо query не буде в URL
-
+    if (!query) return;
+    
     // додаємо сповіщення про пошук
     const getMovie = async () => {
       try {
@@ -39,10 +40,8 @@ const Movies = () => {
       }
     };
 
-    // додаємо запит на фільм тільки при наявності query
-    if (query) {
+    // додаємо запит на фільм
       getMovie();
-    }
   }, [searchParams]);
 
   // додаємо функцію для пошуку фільму
