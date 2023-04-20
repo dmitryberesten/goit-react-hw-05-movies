@@ -12,11 +12,13 @@ const Home = () => {
   useEffect(() => {
     const fetchTrendingMovies = async () => {
       try {
+        setError(false);
+        setIsLoading(true);
         const { results } = await fetchTrendMovies();
         setTrendingMovies(results); // записуємо в стейт
-        setIsLoading(false); // відключаємо індикатор завантаження
       } catch (error) {
         setError(true);
+      } finally {
         setIsLoading(false);
       }
     };

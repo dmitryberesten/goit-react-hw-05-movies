@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'; // додаємо маршрутизацію
+import { Routes, Route, Navigate } from 'react-router-dom'; // додаємо маршрутизацію
 import { lazy } from 'react';
 import { Toaster } from 'react-hot-toast'; // додаємо сповіщення
 
@@ -18,10 +18,11 @@ export const App = () => {
           <Route path="movies" element={<Movies />} />
 
           {/* додаємо динамічний роут */}
-          <Route path="/movies/:movieId" element={<MovieDetails />}>
+          <Route path="movies/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
       <Toaster /> {/* додаємо сповіщення */}
