@@ -20,7 +20,7 @@ const Movies = () => {
   useEffect(() => {
     const query = searchParams.get('query') ?? ''; // щоб не було помилки, якщо query не буде в URL
     if (!query) return;
-    
+
     // додаємо сповіщення про пошук
     const getMovie = async () => {
       try {
@@ -73,3 +73,5 @@ const Movies = () => {
 };
 
 export default Movies;
+
+// Діма Берестень

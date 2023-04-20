@@ -109,3 +109,5 @@ MovieCard.propTypes = {
 };
 
 export default MovieCard;
+
+// Діма Берестень

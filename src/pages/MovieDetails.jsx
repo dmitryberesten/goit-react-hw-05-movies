@@ -52,3 +52,5 @@ const MovieDelails = () => {
 };
 
 export default MovieDelails;
+
+// Діма Берестень

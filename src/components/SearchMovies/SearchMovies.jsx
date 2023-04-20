@@ -31,3 +31,5 @@ const SearchMovies = ({ onSubmit }) => {
 SearchMovies.propTypes = { onSubmit: PropTypes.func.isRequired };
 
 export default SearchMovies;
+
+// Діма Берестень

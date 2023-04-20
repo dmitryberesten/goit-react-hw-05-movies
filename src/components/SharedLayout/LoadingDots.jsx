@@ -12,3 +12,5 @@ export const LoadingIndicator = () => {
     </LoadingDots>
   );
 };
+
+// Діма Берестень
